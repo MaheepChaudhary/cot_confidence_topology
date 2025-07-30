@@ -26,5 +26,17 @@ df_cleaned_tagged['tokens'] = df_cleaned_tagged['tagged_text'].apply(
 
 df_cleaned_tagged['tokens_str'] = df_cleaned_tagged['tokens'].apply(lambda x: " ".join(map(str, x)))
 
-df_cleaned_tagged[['tagged_text', 'tokens_str']].to_csv("TruthfulQA_tagged_tokenized.csv", index=False)
-print("Saved!")
+columns_to_save = [
+    "type",
+    "category",
+    "question",
+    "best_answer",
+    "correct_answers",
+    "incorrect_answers",
+    "source",
+    "tagged_text",
+    "tokens_str"
+]
+
+df_cleaned_tagged[columns_to_save].to_csv("final_clean_truthfulQA.csv", index=False)
+print(df_cleaned_tagged[columns_to_save].head())
