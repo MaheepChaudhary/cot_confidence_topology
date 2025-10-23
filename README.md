@@ -1,1 +1,1 @@
-# Optimizing-Chain-of-Thought-Confidence-via-Topological-and-Dirichlet-Risk-Analysis
+# optimizing_chain_of_thought_confidence_via_topological_and_dirichlet_risk_analysis
